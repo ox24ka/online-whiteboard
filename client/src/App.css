@@ -1,0 +1,98 @@
+.app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+
+.toolbar {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-bottom: 2px solid #ddd;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.toolbar h1 {
+  font-size: 20px;
+  margin-right: 20px;
+  color: #333;
+}
+
+.toolbar button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.toolbar button:hover {
+  background-color: #0056b3;
+}
+
+.toolbar button.clear {
+  background-color: #dc3545;
+}
+
+.toolbar button.clear:hover {
+  background-color: #c82333;
+}
+
+.toolbar label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.toolbar input[type="color"] {
+  width: 40px;
+  height: 30px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.toolbar input[type="range"] {
+  width: 120px;
+}
+
+.canvas-container {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  background-color: white;
+}
+
+canvas {
+  display: block;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.status {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 6px 12px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.status.connected {
+  background-color: rgba(40, 167, 69, 0.9);
+}
+
+.status.disconnected {
+  background-color: rgba(220, 53, 69, 0.9);
+}
